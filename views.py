@@ -34,3 +34,7 @@ def perform_query():
     result = get_resault(cmd, value, file_name, data)
 
     return jsonify(result)
+
+@query_blueprint.route('/ping', methods=['GET'])
+def ping():
+    return 'pong'
